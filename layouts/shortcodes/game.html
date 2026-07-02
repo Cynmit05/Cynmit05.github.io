@@ -1,0 +1,19 @@
+{{- $src := .Get "src" -}}
+{{- $title := .Get "title" | default "Game" -}}
+{{- $width := .Get "width" | default "100%" -}}
+{{- $height := .Get "height" | default "600px" -}}
+
+<div class="game-wrap">
+  <div class="game-header">
+    <span class="game-title">{{ $title }}</span>
+    <button class="game-fullscreen-btn" onclick="this.closest('.game-wrap').querySelector('iframe').requestFullscreen()">全屏</button>
+  </div>
+  <iframe
+    src="{{ $src }}"
+    title="{{ $title }}"
+    style="width:{{ $width }};height:{{ $height }}"
+    allowfullscreen
+    allow="autoplay; fullscreen"
+    loading="lazy">
+  </iframe>
+</div>
