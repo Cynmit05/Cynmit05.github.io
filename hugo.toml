@@ -81,8 +81,8 @@ comments = true
 [params.giscus]
 repo = "Cynmit05/Cynmit05.github.io"
 repoId = "R_kgDOTLNAIA"
-category = "Announcements"
-categoryId = "DIC_kwDOTLNAIM4DAWc8"
+category = "General"
+categoryId = "DIC_kwDOTLNAIM4DAWc9"
 
 [params.profileMode]
 enabled = true
