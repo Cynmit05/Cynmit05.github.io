@@ -56,6 +56,12 @@ name = "碎碎念"
 url = "/whisper/"
 weight = 7
 
+[[menu.main]]
+identifier = "guestbook"
+name = "留言板"
+url = "/guestbook/"
+weight = 8
+
 [params]
 env = "production"
 description = "记录学习、思考与生活。"
@@ -70,7 +76,13 @@ ShowCodeCopyButtons = true
 ShowWordCount = false
 ShowRssButtonInSectionTermList = false
 UseHugoToc = true
-comments = false
+comments = true
+
+[params.giscus]
+repo = ""
+repoId = ""
+category = ""
+categoryId = ""
 
 [params.profileMode]
 enabled = true
@@ -105,3 +117,10 @@ keys = ["title", "permalink", "summary", "content"]
 
 [outputs]
 home = ["HTML", "RSS", "JSON"]
+
+[markup]
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = true
+
+ignoreLogs = ["warning-goldmark-raw-html"]
