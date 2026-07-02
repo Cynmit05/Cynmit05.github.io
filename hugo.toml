@@ -56,12 +56,6 @@ name = "碎碎念"
 url = "/whisper/"
 weight = 7
 
-[[menu.main]]
-identifier = "guestbook"
-name = "留言板"
-url = "/guestbook/"
-weight = 8
-
 [params]
 env = "production"
 description = "记录学习、思考与生活。"
@@ -76,13 +70,7 @@ ShowCodeCopyButtons = true
 ShowWordCount = false
 ShowRssButtonInSectionTermList = false
 UseHugoToc = true
-comments = true
-
-[params.giscus]
-repo = "Cynmit05/Cynmit05.github.io"
-repoId = "R_kgDOTLNAIA"
-category = "General"
-categoryId = "DIC_kwDOTLNAIM4DAWc9"
+comments = false
 
 [params.profileMode]
 enabled = true
