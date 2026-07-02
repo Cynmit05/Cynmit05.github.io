@@ -6,8 +6,12 @@ paginate = 5
 
 defaultContentLanguage = "zh-cn"
 
+locale = "zh-cn"
+
 [languages.zh-cn]
 label = "Chinese"
+locale = "zh-cn"
+direction = "ltr"
 weight = 1
 
 [[menu.main]]
