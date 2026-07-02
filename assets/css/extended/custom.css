@@ -250,3 +250,101 @@ body {
 .share-buttons .copy-link {
   user-select: none;
 }
+
+/* ===== Guestbook Page ===== */
+.guestbook-page {
+  max-width: 100%;
+}
+
+.guestbook-header h1 {
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  color: #e0e0e0;
+  margin-bottom: 0.3rem;
+}
+
+.guestbook-desc {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.guestbook-input-area {
+  margin-bottom: 1rem;
+}
+
+.guestbook-input-hint {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1rem 1.2rem;
+  background: #111;
+  border: 1px solid #1e1e1e;
+  border-radius: 4px;
+  color: #666;
+  font-size: 0.85rem;
+}
+
+.guestbook-input-hint svg {
+  flex-shrink: 0;
+  color: #444;
+}
+
+.guestbook-messages {
+  margin: 1.5rem 0;
+  min-height: 200px;
+}
+
+.guestbook-messages .giscus {
+  max-width: 100%;
+}
+
+.guestbook-share {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #1e1e1e;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.guestbook-share-label {
+  color: #555;
+  font-size: 0.85rem;
+}
+
+.guestbook-share-btns {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.gb-share-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.8rem;
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 4px;
+  color: #888;
+  text-decoration: none;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+
+.gb-share-btn:hover {
+  border-color: #444;
+  color: #e0e0e0;
+  background: #222;
+}
+
+.gb-share-btn svg {
+  flex-shrink: 0;
+}
+
+.gb-share-btn span {
+  line-height: 1;
+}
