@@ -26,6 +26,10 @@
         {{- block "main" . }}{{ end }}
     </main>
     {{ partialCached "footer.html" . .Layout .Kind (.Param "hideFooter") (.Param "ShowCodeCopyButtons") -}}
+    {{- if .Store.Get "hasMermaid" }}
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true,theme:'dark'});</script>
+    {{- end }}
 </body>
 
 </html>
