@@ -1,0 +1,23 @@
+{{- $src := .Get "src" -}}
+{{- $poster := .Get "poster" | default "" -}}
+{{- $width := .Get "width" | default "100%" -}}
+{{- $height := .Get "height" | default "auto" -}}
+{{- $autoplay := .Get "autoplay" | default "false" -}}
+{{- $loop := .Get "loop" | default "false" -}}
+{{- $muted := .Get "muted" | default "false" -}}
+{{- $controls := .Get "controls" | default "true" -}}
+
+<div class="video-wrap">
+  <video
+    {{ if eq $controls "true" }}controls{{ end }}
+    {{ if eq $autoplay "true" }}autoplay{{ end }}
+    {{ if eq $loop "true" }}loop{{ end }}
+    {{ if eq $muted "true" }}muted{{ end }}
+    {{ with $poster }}poster="{{ . }}"{{ end }}
+    style="width:{{ $width }};height:{{ $height }}"
+    preload="metadata"
+    playsinline>
+    <source src="{{ $src }}">
+    你的浏览器不支持视频播放
+  </video>
+</div>

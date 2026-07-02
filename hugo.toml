@@ -45,9 +45,9 @@ url = "/share/"
 weight = 5
 
 [[menu.main]]
-identifier = "daily"
-name = "日常"
-url = "/daily/"
+identifier = "games"
+name = "小游戏"
+url = "/games/"
 weight = 6
 
 [[menu.main]]
