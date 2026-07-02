@@ -202,3 +202,51 @@ body {
   width: 100%;
   border: none;
 }
+
+/* Share buttons - Chinese social media */
+.share-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.share-buttons li {
+  margin: 0;
+}
+
+.share-buttons a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.75rem;
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 4px;
+  color: #888;
+  text-decoration: none;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+
+.share-buttons a:hover {
+  border-color: #444;
+  color: #e0e0e0;
+  background: #222;
+}
+
+.share-buttons a svg {
+  flex-shrink: 0;
+}
+
+.share-buttons a span {
+  line-height: 1;
+}
+
+.share-buttons .wechat-share,
+.share-buttons .copy-link {
+  user-select: none;
+}

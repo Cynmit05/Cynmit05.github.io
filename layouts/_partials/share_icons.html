@@ -1,0 +1,68 @@
+{{- $pageurl := .Permalink }}
+{{- $title := .Title }}
+
+<ul class="share-buttons">
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="分享到微博"
+            href="https://service.weibo.com/share/share.php?url={{ $pageurl }}&amp;title={{ $title }}">
+            <svg viewBox="0 0 24 24" height="22px" width="22px" fill="currentColor">
+                <path d="M10.09 18.23c-3.46.39-6.44-1.22-6.64-3.59-.21-2.37 2.43-4.6 5.89-4.99 3.46-.39 6.44 1.22 6.64 3.59.21 2.37-2.43 4.6-5.89 4.99m8.34-10.9c-.35-.09-.59-.18-.39-.65.38-.91.42-1.7.01-2.27-.79-1.13-2.95-1.07-5.42-.03 0 0-.78.34-.58-.27.38-1.24.32-2.28-.27-2.88-1.35-1.35-4.94.05-8.01 3.13C1.27 8.1.0 11.26 0 14.07c0 5.33 6.83 8.58 13.52 8.58 8.77 0 14.61-5.1 14.61-9.15 0-2.45-2.07-3.84-3.7-4.37M20.5 9.5c-.28 0-.5-.22-.5-.5s.22-.5.5-.5.5.22.5.5-.22.5-.5.5m2.5-2c-.83 0-1.5-.67-1.5-1.5S22.17 4.5 23 4.5s1.5.67 1.5 1.5S23.83 7.5 23 7.5"/>
+            </svg>
+            <span>微博</span>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="分享到QQ"
+            href="https://connect.qq.com/widget/shareqq/index.html?url={{ $pageurl }}&amp;title={{ $title }}">
+            <svg viewBox="0 0 24 24" height="22px" width="22px" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 13.19c-.19.56-.56 1.08-.99 1.5.63.27.87.72.87.72-.97.64-2.52.59-2.52.59s-1.55.05-2.52-.59c0 0 .24-.45.87-.72-.43-.42-.8-.94-.99-1.5-.43 1.02-1.29 1.81-1.29 1.81-1.04-.65-1.41-1.64-1.41-1.64.31-.49.9-.58.9-.58-.28-.91-.25-2.06.07-2.78.21-.47.52-.83.52-.83-.7-.7-.44-1.59-.44-1.59.81-.22 1.63.41 1.63.41.64-.26 1.35-.42 2.16-.42s1.52.16 2.16.42c0 0 .82-.63 1.63-.41 0 0 .26.89-.44 1.59 0 0 .31.36.52.83.32.72.35 1.87.07 2.78 0 0 .59.09.9.58 0 0-.37.99-1.41 1.64 0 0-.86-.79-1.29-1.81z"/>
+            </svg>
+            <span>QQ</span>
+        </a>
+    </li>
+    <li>
+        <a class="wechat-share" aria-label="分享到微信" onclick="copyLink(this)">
+            <svg viewBox="0 0 24 24" height="22px" width="22px" fill="currentColor">
+                <path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 01.213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.295.295a.326.326 0 00.167-.054l1.9-1.106a.864.864 0 01.717-.098 10.16 10.16 0 002.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 01-1.162 1.178A1.17 1.17 0 014.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 01-1.162 1.178 1.17 1.17 0 01-1.162-1.178c0-.651.52-1.18 1.162-1.18zm3.636 4.35c-2.084 0-3.981.793-5.322 2.062-1.343 1.27-2.076 3.01-1.748 4.77.326 1.753 1.658 3.266 3.638 4.11a.545.545 0 01.295.345l.252.957a.396.396 0 00.042.123c.074.1.217.13.323.064l1.26-.733a.545.545 0 01.377-.05c.686.15 1.397.23 2.117.23 3.66 0 6.724-2.333 6.724-5.22 0-2.888-3.064-5.158-6.958-4.658zM13.39 14.1c.478 0 .866.394.866.88a.873.873 0 01-.866.879.873.873 0 01-.866-.88c0-.485.388-.879.866-.879zm4.33 0c.479 0 .866.394.866.88a.873.873 0 01-.866.879.873.873 0 01-.866-.88c0-.485.387-.879.866-.879z"/>
+            </svg>
+            <span>微信</span>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="分享到豆瓣"
+            href="https://www.douban.com/share/service?url={{ $pageurl }}&amp;name={{ $title }}">
+            <svg viewBox="0 0 24 24" height="22px" width="22px" fill="currentColor">
+                <path d="M3.5 3.5h17v2h-17v-2zm1 4h15v6h-15v-6zm2 2v2h11v-2h-11zm-2 6h15v2h-6v3h-3v-3h-6v-2z"/>
+            </svg>
+            <span>豆瓣</span>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="分享到Twitter"
+            href="https://twitter.com/intent/tweet?text={{ $title }}&amp;url={{ $pageurl }}">
+            <svg viewBox="0 0 24 24" height="22px" width="22px" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+            <span>X</span>
+        </a>
+    </li>
+    <li>
+        <a class="copy-link" aria-label="复制链接" onclick="copyLink(this)">
+            <svg viewBox="0 0 24 24" height="22px" width="22px" fill="currentColor">
+                <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+            </svg>
+            <span>复制</span>
+        </a>
+    </li>
+</ul>
+
+<script>
+function copyLink(el) {
+    navigator.clipboard.writeText(window.location.href).then(function() {
+        var span = el.querySelector('span');
+        var orig = span.textContent;
+        span.textContent = '已复制';
+        setTimeout(function() { span.textContent = orig; }, 1500);
+    });
+}
+</script>
