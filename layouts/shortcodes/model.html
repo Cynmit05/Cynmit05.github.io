@@ -1,0 +1,20 @@
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" | default "3D Model" -}}
+{{- $width := .Get "width" | default "100%" -}}
+{{- $height := .Get "height" | default "500px" -}}
+{{- $autoRotate := .Get "autoRotate" | default "true" -}}
+{{- .Page.Store.Set "hasModel" true -}}
+
+<div class="model-viewer-wrap">
+  <model-viewer
+    src="{{ $src }}"
+    alt="{{ $alt }}"
+    style="width:{{ $width }};height:{{ $height }}"
+    auto-rotate="{{ $autoRotate }}"
+    camera-controls
+    shadow-intensity="1"
+    exposure="1"
+    background-color="#111111">
+  </model-viewer>
+  <p class="model-caption">{{ $alt }} — 鼠标拖拽旋转，滚轮缩放</p>
+</div>
