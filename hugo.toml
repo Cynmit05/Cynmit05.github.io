@@ -1,0 +1,96 @@
+baseURL = "https://cynmit05.github.io/"
+title = "Cynmit"
+theme = ["PaperMod"]
+
+paginate = 5
+
+defaultContentLanguage = "zh-cn"
+
+[languages.zh-cn]
+label = "Chinese"
+weight = 1
+
+[[menu.main]]
+identifier = "home"
+name = "首页"
+url = "/"
+weight = 1
+
+[[menu.main]]
+identifier = "learn"
+name = "学习"
+url = "/learn/"
+weight = 2
+
+[[menu.main]]
+identifier = "practice"
+name = "实战"
+url = "/practice/"
+weight = 3
+
+[[menu.main]]
+identifier = "plan"
+name = "计划"
+url = "/plan/"
+weight = 4
+
+[[menu.main]]
+identifier = "share"
+name = "分享"
+url = "/share/"
+weight = 5
+
+[[menu.main]]
+identifier = "daily"
+name = "日常"
+url = "/daily/"
+weight = 6
+
+[[menu.main]]
+identifier = "whisper"
+name = "碎碎念"
+url = "/whisper/"
+weight = 7
+
+[params]
+env = "production"
+description = "记录学习、思考与生活。"
+author = "Cynmit"
+defaultTheme = "dark"
+disableThemeToggle = true
+ShowReadingTime = true
+ShowShareButtons = false
+ShowPostNavLinks = true
+ShowBreadCrumbs = false
+ShowCodeCopyButtons = true
+ShowWordCount = false
+ShowRssButtonInSectionTermList = false
+UseHugoToc = true
+comments = false
+
+[params.profileMode]
+enabled = true
+title = "Cynmit"
+subtitle = "记录学习、思考与生活"
+imageUrl = ""
+imageWidth = 120
+imageHeight = 120
+
+[[params.socialIcons]]
+name = "github"
+url = "https://github.com/cynmit05"
+
+[params.assets]
+disableHLJS = true
+
+[params.fuseOpts]
+isCaseSensitive = false
+shouldSort = true
+location = 0
+distance = 1000
+threshold = 0.4
+minMatchCharLength = 0
+keys = ["title", "permalink", "summary", "content"]
+
+[outputs]
+home = ["HTML", "RSS", "JSON"]

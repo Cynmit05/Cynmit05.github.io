@@ -1,0 +1,101 @@
+:root {
+  --gap: 2rem;
+}
+
+/* Darker background */
+body {
+  --theme: #0a0a0a;
+  --entry: #111111;
+  --primary: #e0e0e0;
+  --secondary: #888888;
+  --tertiary: #222222;
+  --content: #c8c8c8;
+  --code-bg: #1a1a1a;
+  --border: #1e1e1e;
+}
+
+/* Thinner nav */
+.header {
+  padding: 0 1rem;
+}
+
+.main {
+  max-width: 820px;
+}
+
+/* Nav style - clean and minimal */
+.nav {
+  font-size: 0.9rem;
+}
+
+.nav a {
+  color: #888;
+  transition: color 0.2s;
+}
+
+.nav a:hover {
+  color: #fff;
+}
+
+/* Post entry cards */
+.post-entry {
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--entry);
+  transition: border-color 0.2s;
+}
+
+.post-entry:hover {
+  border-color: #333;
+}
+
+/* Profile mode */
+.profile {
+  align-items: center;
+}
+
+.profile_inner h1 {
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  color: #e0e0e0;
+}
+
+.profile_inner span {
+  color: #666;
+  font-weight: 300;
+  font-size: 0.95rem;
+}
+
+/* Hide search icon for cleaner look */
+#searchToggle {
+  display: none;
+}
+
+/* Softer scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 2px;
+}
+
+/* Subtle footer */
+.footer {
+  color: #444;
+  font-size: 0.8rem;
+}
+
+/* Code blocks */
+.post-content pre {
+  background: #111 !important;
+  border: 1px solid #1e1e1e;
+  border-radius: 4px;
+}
+
+/* List pages - section title */
+.list-page h1 {
+  font-weight: 300;
+  letter-spacing: 0.05em;
+}
