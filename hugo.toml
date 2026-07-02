@@ -84,6 +84,13 @@ imageHeight = 120
 name = "github"
 url = "https://github.com/cynmit05"
 
+[[params.socialIcons]]
+name = "email"
+url = "mailto:2678600304@qq.com"
+
+[params.footer]
+text = "LI FU JUN · 2678600304@qq.com"
+
 [params.assets]
 disableHLJS = true
 
