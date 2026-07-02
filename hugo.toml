@@ -79,10 +79,10 @@ UseHugoToc = true
 comments = true
 
 [params.giscus]
-repo = ""
-repoId = ""
-category = ""
-categoryId = ""
+repo = "Cynmit05/Cynmit05.github.io"
+repoId = "1286815776"
+category = "Announcements"
+categoryId = "DIC_kwDOTLNAIM4DAWc8"
 
 [params.profileMode]
 enabled = true
