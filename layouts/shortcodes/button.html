@@ -1,0 +1,4 @@
+{{- $text := .Get "text" | default "按钮" -}}
+{{- $link := .Get "link" | default "#" -}}
+{{- $style := .Get "style" | default "filled" -}}
+<a href="{{ $link }}" class="doc-btn doc-btn-{{ $style }}">{{ $text }}</a>

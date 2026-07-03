@@ -1,0 +1,8 @@
+{{- $title := .Get "title" | default "详情" -}}
+{{- $open := eq (.Get "open" | default "false") "true" -}}
+<details class="doc-details"{{ if $open }} open{{ end }}>
+  <summary class="doc-details-summary">{{ $title }}</summary>
+  <div class="doc-details-content">
+    {{ .Inner }}
+  </div>
+</details>

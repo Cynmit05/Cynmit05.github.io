@@ -33,6 +33,26 @@
     {{- if .Store.Get "hasModel" }}
     <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3/dist/model-viewer.min.js"></script>
     {{- end }}
+    {{- if .Store.Get "hasTabs" }}
+    <script>
+    document.querySelectorAll('.doc-tabs, .doc-codegroup').forEach(function(container) {
+      var nav = container.querySelector('.doc-tabs-nav, .doc-codegroup-nav');
+      if (!nav) return;
+      nav.addEventListener('click', function(e) {
+        var btn = e.target.closest('.doc-tab-btn, .doc-codegroup-btn');
+        if (!btn) return;
+        var tabId = btn.dataset.tab;
+        nav.querySelectorAll('button').forEach(function(b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        var body = container.querySelector('.doc-tabs-body, .doc-codegroup-body');
+        if (!body) return;
+        body.querySelectorAll('.doc-tab-panel, .doc-codefile-panel').forEach(function(p) { p.classList.remove('active'); });
+        var target = document.getElementById(tabId);
+        if (target) target.classList.add('active');
+      });
+    });
+    </script>
+    {{- end }}
 </body>
 
 </html>

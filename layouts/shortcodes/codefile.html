@@ -1,0 +1,11 @@
+{{- $name := .Get "name" | default "file" -}}
+{{- $parentID := .Parent.Ordinal | printf "codegroup-%d" -}}
+{{- $fileIndex := .Ordinal -}}
+{{- with .Parent.Scratch.Get "codefile-names" -}}
+{{- else -}}
+  {{- .Parent.Scratch.Set "codefile-names" slice -}}
+{{- end -}}
+{{- .Parent.Scratch.Add "codefile-names" $name -}}
+<div class="doc-codefile-panel{{ if eq $fileIndex 0 }} active{{ end }}" id="{{ $parentID }}-{{ $fileIndex }}">
+  {{ .Inner }}
+</div>

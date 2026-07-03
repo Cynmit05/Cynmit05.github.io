@@ -1,0 +1,3 @@
+{{- $text := .Get "text" | default "Badge" -}}
+{{- $color := .Get "color" | default "blue" -}}
+<span class="doc-badge doc-badge-{{ $color }}">{{ $text }}</span>

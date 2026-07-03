@@ -1,0 +1,8 @@
+{{- $text := .Get "text" -}}
+{{- if $text }}
+<div class="doc-divider">
+  <span class="doc-divider-text">{{ $text }}</span>
+</div>
+{{- else }}
+<div class="doc-divider"></div>
+{{- end }}

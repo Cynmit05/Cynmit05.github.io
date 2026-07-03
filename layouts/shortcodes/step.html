@@ -1,0 +1,13 @@
+{{- $title := .Get "title" | default "步骤" -}}
+{{- $date := .Get "date" -}}
+<div class="doc-timeline-step">
+  <div class="doc-timeline-dot"></div>
+  <div class="doc-timeline-line"></div>
+  <div class="doc-timeline-content">
+    <div class="doc-timeline-header">
+      <span class="doc-timeline-title">{{ $title }}</span>
+      {{- with $date }}<span class="doc-timeline-date">{{ . }}</span>{{ end }}
+    </div>
+    <div class="doc-timeline-body">{{ $.Inner }}</div>
+  </div>
+</div>

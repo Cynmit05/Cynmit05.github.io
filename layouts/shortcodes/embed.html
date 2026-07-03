@@ -1,0 +1,10 @@
+{{- $url := .Get "url" | default "" -}}
+{{- $title := .Get "title" | default "嵌入页面" -}}
+{{- $height := .Get "height" | default "400px" -}}
+<div class="doc-embed">
+  <div class="doc-embed-header">
+    <span class="doc-embed-title">{{ $title }}</span>
+    <a href="{{ $url }}" target="_blank" rel="noopener" class="doc-embed-open">↗ 新窗口打开</a>
+  </div>
+  <iframe src="{{ $url }}" class="doc-embed-iframe" style="height:{{ $height }}" loading="lazy" sandbox="allow-scripts allow-same-origin"></iframe>
+</div>

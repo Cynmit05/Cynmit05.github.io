@@ -1,0 +1,16 @@
+{{- $id := .Ordinal | printf "tabs-%d" -}}
+{{- .Page.Store.Set "hasTabs" true -}}
+<div class="doc-tabs" id="{{ $id }}">
+  <div class="doc-tabs-nav">
+    {{- $inner := .Inner -}}
+    {{- $first := true -}}
+    {{- with .Scratch.Get "tab-names" -}}
+      {{- range $i, $name := . -}}
+        <button class="doc-tab-btn{{ if eq $i 0 }} active{{ end }}" data-tab="{{ $id }}-{{ $i }}">{{ $name }}</button>
+      {{- end -}}
+    {{- end -}}
+  </div>
+  <div class="doc-tabs-body">
+    {{ .Inner }}
+  </div>
+</div>

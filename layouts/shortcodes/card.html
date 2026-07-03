@@ -1,0 +1,17 @@
+{{- $title := .Get "title" | default "卡片" -}}
+{{- $link := .Get "link" -}}
+{{- $image := .Get "image" -}}
+<div class="doc-card">
+  {{- if $image }}
+  <div class="doc-card-image">
+    <img src="{{ $image }}" alt="{{ $title }}" loading="lazy">
+  </div>
+  {{- end }}
+  <div class="doc-card-body">
+    <div class="doc-card-title">{{ $title }}</div>
+    <div class="doc-card-desc">{{ .Inner }}</div>
+  </div>
+  {{- if $link }}
+  <a href="{{ $link }}" class="doc-card-link" target="_blank" rel="noopener"></a>
+  {{- end }}
+</div>

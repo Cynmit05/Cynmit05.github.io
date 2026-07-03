@@ -1,0 +1,11 @@
+{{- $author := .Get "author" -}}
+{{- $source := .Get "source" -}}
+<blockquote class="doc-quote">
+  <div class="doc-quote-text">{{ .Inner }}</div>
+  {{- if or $author $source }}
+  <div class="doc-quote-attr">
+    {{- with $author }}<span class="doc-quote-author">— {{ . }}</span>{{ end }}
+    {{- with $source }}<span class="doc-quote-source">《{{ . }}》</span>{{ end }}
+  </div>
+  {{- end }}
+</blockquote>

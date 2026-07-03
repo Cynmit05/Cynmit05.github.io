@@ -1,0 +1,9 @@
+{{- $value := .Get "value" | default "0" -}}
+{{- $label := .Get "label" -}}
+<div class="doc-progress">
+  {{- with $label }}<div class="doc-progress-label">{{ . }}</div>{{ end }}
+  <div class="doc-progress-bar">
+    <div class="doc-progress-fill" style="width: {{ $value }}%"></div>
+  </div>
+  <div class="doc-progress-value">{{ $value }}%</div>
+</div>

@@ -1,0 +1,11 @@
+{{- $name := .Get "name" | default "Tab" -}}
+{{- $parentID := .Parent.Ordinal | printf "tabs-%d" -}}
+{{- $tabIndex := .Ordinal -}}
+{{- with .Parent.Scratch.Get "tab-names" -}}
+{{- else -}}
+  {{- .Parent.Scratch.Set "tab-names" slice -}}
+{{- end -}}
+{{- .Parent.Scratch.Add "tab-names" $name -}}
+<div class="doc-tab-panel{{ if eq $tabIndex 0 }} active{{ end }}" id="{{ $parentID }}-{{ $tabIndex }}">
+  {{ .Inner }}
+</div>

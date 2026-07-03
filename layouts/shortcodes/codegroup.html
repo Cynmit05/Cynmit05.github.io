@@ -1,0 +1,14 @@
+{{- $id := .Ordinal | printf "codegroup-%d" -}}
+{{- .Page.Store.Set "hasTabs" true -}}
+<div class="doc-codegroup" id="{{ $id }}">
+  <div class="doc-codegroup-nav">
+    {{- with .Scratch.Get "codefile-names" -}}
+      {{- range $i, $name := . -}}
+        <button class="doc-codegroup-btn{{ if eq $i 0 }} active{{ end }}" data-tab="{{ $id }}-{{ $i }}">{{ $name }}</button>
+      {{- end -}}
+    {{- end -}}
+  </div>
+  <div class="doc-codegroup-body">
+    {{ .Inner }}
+  </div>
+</div>
